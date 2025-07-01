@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Registro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-section signup">
+      <!-- Logo dentro do painel esquerdo -->
+      <div class="logo-container">
+        <img src="Pitch_-_Adapta_Move-removebg-preview.png" alt="Logo Adapta" width="500" class="hover-img1"> 
+      </div>
+      <h1>Bem Vindo!</h1>
+      <p>
+        Mude a forma como você enxerga a saúde <br />
+        registre-se agora.
+      </p>
+    </div>
+
+    <div class="auth-form-container">
+      <h1>Inscreva-se</h1>
+      <form class="auth-form" id="registerForm">
+        <div class="auth-input-container">
+          <input
+            type="text"
+            class="auth-input-field"
+            placeholder="Nome de Usuário"
+            id="username"
+            required
+          />
+          <label for="username" class="auth-input-label">Nome de Usuário</label>
+          <i class="input-icon fa fa-user"></i>
+        </div>
+      
+        <div class="auth-input-container">
+          <input
+            type="email"
+            class="auth-input-field"
+            placeholder="E-mail"
+            id="email"
+            required
+          />
+          <label for="email" class="auth-input-label">E-mail</label>
+          <i class="input-icon fa fa-envelope"></i>
+        </div>
+      
+        <div class="auth-input-container">
+          <input
+            type="password"
+            class="auth-input-field"
+            placeholder="Senha"
+            id="password"
+            required
+          />
+          <label for="password" class="auth-input-label">Senha</label>
+          <i class="input-icon fa fa-lock"></i>
+        </div>
+      
+        <!-- ✅ Adicione isso aqui -->
+        <div id="formError" style="color: red; font-weight: bold; margin-bottom: 10px; display: none;"></div>
+      
+        <button type="submit" class="auth-submit-button">Inscrever-se</button>
+        <a href="login.html" class="auth-link">Já tem uma conta?</a>
+      </form>
+      
+    </div>
+  </div>
+
+  <script src="registro.js"></script>
+</body>
+</html>

@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adapta Nutri - Nutrição Personalizada</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header-gradient">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="Pitch_-_Adapta_Move-removebg-preview.png" alt="Logo Adapta Nutri" class="logo-img">
+            </div>
+            
+            <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Menu Mobile">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav" aria-label="Navegação principal">
+                <ul class="nav-links">
+                    <li><a href="#" data-aba="inicio" class="nav-link"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="#" data-aba="nutricao" class="nav-link"><i class="fas fa-utensils"></i> Nutrição</a></li>
+                    <li><a href="#" data-aba="central" class="nav-link"><i class="fas fa-bullseye"></i> Metas</a></li>
+                    <li><a href="#" data-aba="receitas" class="nav-link"><i class="fas fa-book-open"></i> Receitas</a></li>
+                    <li><a href="#" data-aba="sobre" class="nav-link"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                </ul>
+            </nav>
+            
+            <div class="user-menu-container">
+                <div class="user-circle" id="userMenuButton">
+                    <span id="userInitial">U</span>
+                  </div>
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <a href="#" data-aba="minha-conta"><i class="fas fa-user"></i> Minha Conta</a>
+                    <a href="#" data-aba="configuracoes"><i class="fas fa-cog"></i> Configurações</a>
+                    <div class="divider"></div>
+                    <a href="login.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Seção Início -->
+        <section id="inicio" class="aba ativa">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h2 class="hero-title">Bem vindo, <span id="user-welcome">Usuário</span>!</h2>
+                    <p class="hero-subtitle">Transforme sua saúde com nutrição personalizada</p>
+                    <button class="cta-button" data-aba="nutricao">Comece Agora</button>
+                </div>
+                <div class="hero-image">
+                    <img src="alimentacaosaudavel.jpg" alt="Alimentação saudável" class="hero-img">
+                </div>
+            </div>
+
+           <!-- Substitua o tutorial-container na aba início por: -->
+<div class="tutorial-container">
+    <h2>Como usar o Adapta Nutri</h2>
+    <div class="tutorial-steps">
+        <div class="tutorial-step">
+            <div class="step-icon"><i class="fas fa-user-circle"></i></div>
+            <div class="step-content">
+                <h3>Complete seu perfil</h3>
+                <p>Vá para a seção "Minha Conta" e complete suas informações pessoais para cálculos mais precisos de suas necessidades nutricionais.</p>
+            </div>
+        </div>
+        <div class="tutorial-step">
+            <div class="step-icon"><i class="fas fa-calculator"></i></div>
+            <div class="step-content">
+                <h3>Calcule suas métricas</h3>
+                <p>Na seção "Nutrição", insira seus dados para calcular IMC, TMB, necessidades calóricas e outros indicadores importantes.</p>
+            </div>
+        </div>
+        <div class="tutorial-step">
+            <div class="step-icon"><i class="fas fa-bullseye"></i></div>
+            <div class="step-content">
+                <h3>Defina suas metas</h3>
+                <p>Na "Central de Metas", escolha seu objetivo principal e personalize sua distribuição de macronutrientes.</p>
+            </div>
+        </div>
+        <div class="tutorial-step">
+            <div class="step-icon"><i class="fas fa-utensils"></i></div>
+            <div class="step-content">
+                <h3>Explore receitas</h3>
+                <p>Encontre receitas saudáveis filtradas por seus objetivos na seção "Receitas".</p>
+            </div>
+        </div>
+        <div class="tutorial-step">
+            <div class="step-icon"><i class="fas fa-chart-line"></i></div>
+            <div class="step-content">
+                <h3>Acompanhe seu progresso</h3>
+                <p>Monitore sua evolução na aba "Progresso" e consulte seu histórico completo na aba "Histórico".</p>
+            </div>
+        </div>
+    </div>
+</div>
+            
+            <div class="features-container">
+                <div class="feature-card">
+                    <i class="fas fa-calculator feature-icon"></i>
+                    <h3>Cálculos Nutricionais</h3>
+                    <p>Calcule suas necessidades calóricas e nutricionais com precisão.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-line feature-icon"></i>
+                    <h3>Acompanhamento</h3>
+                    <p>Monitore seu progresso com nossa central de metas.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-book-open feature-icon"></i>
+                    <h3>Receitas Saudáveis</h3>
+                    <p>Descubra receitas alinhadas com seus objetivos.</p>
+                </div>
+            </div>
+            
+            <div class="ods-container">
+                <div class="ods-text">
+                    <h2>Para quem é o Adapta Nutri?</h2>
+                    <p>
+                        O Adapta Nutri é para quem busca uma abordagem científica e personalizada para sua alimentação. Nosso sistema calcula suas necessidades nutricionais específicas e ajuda você a alcançar seus objetivos de saúde.
+                    </p>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check-circle"></i> Cálculo preciso de necessidades calóricas</li>
+                        <li><i class="fas fa-check-circle"></i> Distribuição ideal de macronutrientes</li>
+                        <li><i class="fas fa-check-circle"></i> Acompanhamento de progresso nutricional</li>
+                        <li><i class="fas fa-check-circle"></i> Banco de receitas personalizadas</li>
+                        <li><i class="fas fa-check-circle"></i> Histórico completo de evolução</li>
+                    </ul>
+                </div>
+                <img src="1.jpg" alt="Nutrição personalizada" class="ods-image">
+            </div>
+
+            <div class="ods-container">
+                <div class="ods-text">
+                    <h2>ODS 3 - Saúde e Bem-estar</h2>
+                    <p>
+                        O Adapta Nutri está alinhado com o Objetivo de Desenvolvimento Sustentável 3 da ONU, que visa assegurar uma vida saudável e promover o bem-estar para todos, em todas as idades. Nossa plataforma contribui para:
+                    </p>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check-circle"></i> Redução de doenças relacionadas à má alimentação</li>
+                        <li><i class="fas fa-check-circle"></i> Promoção de hábitos alimentares saudáveis</li>
+                        <li><i class="fas fa-check-circle"></i> Acesso à informação nutricional de qualidade</li>
+                        <li><i class="fas fa-check-circle"></i> Prevenção da obesidade e desnutrição</li>
+                        <li><i class="fas fa-check-circle"></i> Bem-estar físico e mental através da nutrição</li>
+                    </ul>
+                </div>
+                <img src="images.jpg" alt="ODS Saúde e Bem-estar" class="ods-image">
+            </div>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="sobre" class="aba">
+            <div class="sobre-content">
+                <h2>Sobre Nós</h2>
+                <img src="fotonossa.png" alt="Equipe Adapta Nutri" class="hover-img">
+                
+                <div class="sobre-texto">
+                    <div class="sobre-item">
+                        <h3>Missão</h3>
+                        <p>Promover saúde através da nutrição personalizada</p>
+                    </div>
+                    
+                    <div class="sobre-item">
+                        <h3>Valores</h3>
+                        <p>Ciência, personalização e acessibilidade</p>
+                    </div>
+                    
+                    <div class="sobre-item">
+                        <h3>Visão</h3>
+                        <p>Ser referência em nutrição personalizada no Brasil</p>
+                    </div>
+                    
+                    <div class="sobre-item suporte">
+                        <h3>Suporte</h3>
+                        <p>Tem dúvidas? Nos chame para ajudar! Nossa equipe está pronta para fornecer todas as informações necessárias.</p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:ben-hur.pimentel@estudante.ifmt.edu.br">ben-hur.pimentel@estudante.ifmt.edu.br</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:lara.melissa@estudante.ifmt.edu.br">lara.melissa@estudante.ifmt.edu.br</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:j.marcelo@estudante.ifmt.edu.br">j.marcelo@estudante.ifmt.edu.br</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:yara.abreu@estudante.ifmt.edu.br">yara.abreu@estudante.ifmt.edu.br</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Nutrição -->
+        <section id="nutricao" class="aba">
+            <div class="nutricao-container">
+                <h2>Nutrição</h2>
+                <p class="nutricao-descricao">Calcule suas necessidades nutricionais para alcançar seus objetivos de saúde.</p>
+        
+                <form id="form-nutricao">
+                    <div class="form-group">
+                        <label for="idade">Idade (anos):</label>
+                        <input type="number" id="idade" name="idade" required min="10" max="120">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="altura">Altura (cm):</label>
+                        <input type="number" id="altura" name="altura" required min="100" max="250">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="peso">Peso (kg):</label>
+                        <input type="number" id="peso" name="peso" required min="30" max="300">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sexo">Sexo:</label>
+                        <select id="sexo" name="sexo">
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nivelAtividade">Nível de Atividade:</label>
+                        <select id="nivelAtividade" name="nivelAtividade">
+                            <option value="sedentario">Sedentário</option>
+                            <option value="leve">Leve</option>
+                            <option value="moderado">Moderado</option>
+                            <option value="intenso">Intenso</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="circunferencia-cintura">Circunferência da Cintura (cm):</label>
+                        <input type="number" id="circunferencia-cintura" name="circunferencia-cintura" min="50" max="200">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="circunferencia-quadril">Circunferência do Quadril (cm):</label>
+                        <input type="number" id="circunferencia-quadril" name="circunferencia-quadril" min="60" max="250">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="percentual-gordura">Percentual de Gordura (%):</label>
+                        <input type="number" id="percentual-gordura" name="percentual-gordura" min="5" max="60" step="0.1">
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="button" class="btn-calcular" onclick="calcular()">Calcular</button>
+                        <button type="button" class="btn-salvar" onclick="salvarDados()">Salvar Dados</button>
+                    </div>
+                </form>
+
+                <div class="resultados-nutricao" id="resultados" style="display: none;">
+                    <h3>Seus Resultados Nutricionais</h3>
+                    
+                    <div class="metricas-container">
+                        <div class="metrica-card">
+                            <div class="metrica-icon"><i class="fas fa-fire"></i></div>
+                            <div class="metrica-valor" id="metrica-tmb">-</div>
+                            <div class="metrica-label">Taxa Metabólica Basal</div>
+                        </div>
+                        <div class="metrica-card">
+                            <div class="metrica-icon"><i class="fas fa-bolt"></i></div>
+                            <div class="metrica-valor" id="metrica-gcd">-</div>
+                            <div class="metrica-label">Gasto Calórico Diário</div>
+                        </div>
+                        <div class="metrica-card">
+                            <div class="metrica-icon"><i class="fas fa-weight"></i></div>
+                            <div class="metrica-valor" id="metrica-imc">-</div>
+                            <div class="metrica-label">Índice de Massa Corporal</div>
+                        </div>
+                        <div class="metrica-card">
+                            <div class="metrica-icon"><i class="fas fa-tint"></i></div>
+                            <div class="metrica-valor" id="metrica-agua">-</div>
+                            <div class="metrica-label">Água Recomendada</div>
+                        </div>
+                    </div>
+
+                                            <!-- Nova métrica de RCQ -->
+                            <div class="metrica-card">
+                                <div class="metrica-icon"><i class="fas fa-ruler-combined"></i></div>
+                                <div class="metrica-valor" id="metrica-rcq">-</div>
+                                <div class="metrica-label">Relação Cintura-Quadril</div>
+                            </div>
+    
+                    
+                    <div class="graficos-container">
+                        <!-- Gráfico existente do IMC -->
+                        <div class="grafico-card">
+                            <h4>Índice de Massa Corporal</h4>
+                            <canvas id="imcChart" height="200"></canvas>
+                        </div>
+                        
+                        <!-- Novo gráfico de composição corporal -->
+                        <div class="grafico-card">
+                            <h4>Composição Corporal</h4>
+                            <canvas id="bodyFatChart" height="200"></canvas>
+                        </div>
+                        
+                        <!-- Novo gráfico de consumo de água -->
+                        <div class="grafico-card">
+                            <h4>Consumo de Água</h4>
+                            <canvas id="waterChart" height="200"></canvas>
+                        </div>
+                        
+                        <!-- Gráfico existente de distribuição de macros -->
+                        <div class="grafico-card">
+                            <h4></h4>
+                            <canvas id="macrosChart" height="200"></canvas>
+                        </div>
+                    </div>
+                    
+                    <!-- Adicione estas novas métricas -->
+                    <div class="metricas-container">
+                        <!-- Métricas existentes -->
+                        <div class="metrica-card">
+                            <div class="metrica-icon"><i class=""></i></div>
+                            <div class="metrica-valor" id="metrica-tmb"></div>
+                            <div class="metrica-label"></div>
+                        </div>
+                    
+
+                </section> 
+        <!-- Seção Central de Metas -->
+        <section id="central" class="aba">
+            <div class="central-metas">
+                <h2>Central de Metas</h2>
+                
+                <!-- Guia para escolha de meta -->
+                <div id="metaGuide">
+                    <h3>Escolha seu objetivo principal</h3>
+                    <div class="meta-options">
+                        <div class="meta-option" data-goal="perda">
+                            <i class="fas fa-weight"></i>
+                            <h4>Perda de Peso</h4>
+                            <p>Déficit calórico para redução de gordura corporal</p>
+                        </div>
+                        <div class="meta-option" data-goal="manutencao">
+                            <i class="fas fa-balance-scale"></i>
+                            <h4>Manutenção</h4>
+                            <p>Manter seu peso atual com nutrição balanceada</p>
+                        </div>
+                        <div class="meta-option" data-goal="ganho">
+                            <i class="fas fa-dumbbell"></i>
+                            <h4>Ganho Muscular</h4>
+                            <p>Superávit calórico para construção muscular</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dashboard de Metas -->
+                <div class="dashboard-metas">
+                    <div class="dashboard-card">
+                        <h3>Distribuição de Macronutrientes</h3>
+                        
+                        <div class="macros-table">
+                            <table>
+                    <thead>
+                        <tr>
+                            <th>Macronutriente</th>
+                            <th>Gramas/Dia</th>
+                            <th>Porcentagem</th>
+                            <th>Calorias</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="fas fa-dumbbell"></i> Proteínas</td>
+                            <td id="meta-proteina-gramas">-</td>
+                            <td id="meta-proteina-percent">-</td>
+                            <td id="meta-proteina-calorias">-</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-bread-slice"></i> Carboidratos</td>
+                            <td id="meta-carbo-gramas">-</td>
+                            <td id="meta-carbo-percent">-</td>
+                            <td id="meta-carbo-calorias">-</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-oil-can"></i> Gorduras</td>
+                            <td id="meta-gordura-gramas">-</td>
+                            <td id="meta-gordura-percent">-</td>
+                            <td id="meta-gordura-calorias">-</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td><strong>Total</strong></td>
+                            <td id="meta-total-gramas">-</td>
+                            <td id="meta-total-percent">100%</td>
+                            <td id="meta-calorias">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+                <h3>Resumo Nutricional</h3>
+                <div class="metricas-container">
+                    <div class="metrica-card">
+                        <div class="metrica-icon"><i class="fas fa-bullseye"></i></div>
+                        <div class="metrica-valor" id="meta-calorias">-</div>
+                        <div class="metrica-label">Meta Calórica</div>
+                    </div>
+                    <div class="metrica-card">
+                        <div class="metrica-icon"><i class="fas fa-dumbbell"></i></div>
+                        <div class="metrica-valor" id="meta-proteina">-</div>
+                        <div class="metrica-label">Proteína (g)</div>
+                    </div>
+                    <div class="metrica-card">
+                        <div class="metrica-icon"><i class="fas fa-bread-slice"></i></div>
+                        <div class="metrica-valor" id="meta-carbo">-</div>
+                        <div class="metrica-label">Carbo (g)</div>
+                    </div>
+                    <div class="metrica-card">
+                        <div class="metrica-icon"><i class="fas fa-oil-can"></i></div>
+                        <div class="metrica-valor" id="meta-gordura">-</div>
+                        <div class="metrica-label">Gordura (g)</div>
+                    </div>
+                </div>
+                
+                    </div>
+
+                </div>
+            
+            <div class="dashboard-card">
+                <h3>Planejador de Refeições</h3>
+                <div class="macros-container">
+                    <div class="macro-card">
+                        <div class="macro-icon"><i class="fas fa-utensils"></i></div>
+                        <div class="macro-info">
+                            <div class="macro-nome">Café da Manhã</div>
+                            <div class="macro-detalhes">
+                                <span>0/400 kcal</span>
+                                <span>0%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="macro-card">
+                        <div class="macro-icon"><i class="fas fa-apple-alt"></i></div>
+                        <div class="macro-info">
+                            <div class="macro-nome">Lanche</div>
+                            <div class="macro-detalhes">
+                                <span>0/200 kcal</span>
+                                <span>0%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="macro-card">
+                        <div class="macro-icon"><i class="fas fa-drumstick-bite"></i></div>
+                        <div class="macro-info">
+                            <div class="macro-nome">Almoço</div>
+                            <div class="macro-detalhes">
+                                <span>0/600 kcal</span>
+                                <span>0%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="macro-card">
+                        <div class="macro-icon"><i class="fas fa-seedling"></i></div>
+                        <div class="macro-info">
+                            <div class="macro-nome">Lanche Tarde</div>
+                            <div class="macro-detalhes">
+                                <span>0/200 kcal</span>
+                                <span>0%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="macro-card">
+                        <div class="macro-icon"><i class="fas fa-fish"></i></div>
+                        <div class="macro-info">
+                            <div class="macro-nome">Jantar</div>
+                            <div class="macro-detalhes">
+                                <span>0/500 kcal</span>
+                                <span>0%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="refeicoes-container">
+                    <h4>Planejador Automático</h4>
+                    <div class="auto-planning">
+                        <div class="plan-section">
+                            <h5>Alimentos Sugeridos</h5>
+                            <div class="suggested-foods" id="suggested-foods">
+                                <div class="food-item" data-macros="protein">Peito de frango</div>
+                                <div class="food-item" data-macros="carbs">Arroz integral</div>
+                                <div class="food-item" data-macros="fat">Abacate</div>
+                            </div>
+                        </div>
+                        <div class="plan-section">
+                            <div id="auto-meal-preview"></div>
+                            <button class="btn-generate">
+                                <i class="fas fa-magic"></i> Gerar Plano Automático
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-adicionar-refeicao" onclick="mostrarAba('receitas')">
+                        <i class="fas fa-plus"></i> Adicionar Refeição
+                    </button>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Acompanhamento Diário</h3>
+                <div class="daily-tracker">
+                    <div class="tracker-macros">
+                        <div class="tracker-item protein">
+                            <span class="tracker-value">0g</span>
+                            <span class="tracker-label">Proteína</span>
+                        </div>
+                        <div class="tracker-item carbs">
+                            <span class="tracker-value">0g</span>
+                            <span class="tracker-label">Carboidratos</span>
+                        </div>
+                        <div class="tracker-item fat">
+                            <span class="tracker-value">0g</span>
+                            <span class="tracker-label">Gorduras</span>
+                        </div>
+                    </div>
+                    <div class="tracker-calories">
+                        <span class="calories-value">0</span>
+                        <span class="calories-label">kcal consumidas</span>
+                    </div>
+                </div>
+
+                <button onclick="adicionarConsumo()" class="btn-adicionar-refeicao">
+                    <i class="fas fa-plus"></i> Adicionar Consumo Manual
+                </button>
+                
+                <h3>Conquistas</h3>
+                <div class="conquistas-container">
+                    <div class="conquista-card">
+                        <div class="conquista-icon"><i class="fas fa-trophy"></i></div>
+                        <div class="conquista-titulo">Primeiros Passos</div>
+                    </div>
+                    <div class="conquista-card">
+                        <div class="conquista-icon"><i class="fas fa-medal"></i></div>
+                        <div class="conquista-titulo">Meta Diária</div>
+                    </div>
+                    <div class="conquista-card">
+                        <div class="conquista-icon"><i class="fas fa-star"></i></div>
+                        <div class="conquista-titulo">Semana Saudável</div>
+                    </div>
+                    <div class="conquista-card">
+                        <div class="conquista-icon"><i class="fas fa-award"></i></div>
+                        <div class="conquista-titulo">Mestre da Nutrição</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Seção Receitas -->
+        <section id="receitas" class="aba">
+            <div class="receitas-content">
+                <h2>Receitas Saudáveis</h2>
+                <div class="filtro-receitas">
+                    <select id="filtro-objetivo">
+                        <option value="todos">Todas as receitas</option>
+                        <option value="perda">Perda de peso</option>
+                        <option value="manutencao">Manutenção</option>
+                        <option value="ganho">Ganho muscular</option>
+                    </select>
+                    <select id="filtro-dificuldade">
+                        <option value="todos">Todas as dificuldades</option>
+                        <option value="facil">Fácil</option>
+                        <option value="medio">Médio</option>
+                        <option value="dificil">Difícil</option>
+                    </select>
+                    <select id="filtro-tempo">
+                        <option value="todos">Qualquer tempo</option>
+                        <option value="rapido">Rápido (até 15 min)</option>
+                        <option value="medio">Médio (15-30 min)</option>
+                        <option value="demorado">Demorado (+30 min)</option>
+                    </select>
+                    <button id="buscar-receitas">Buscar</button>
+                </div>
+                
+                <div class="receitas-grid" id="receitas-container">
+                    <!-- Receitas serão carregadas via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Minha Conta -->
+        <section id="minha-conta" class="aba">
+            <div class="conta-container">
+                <h2>Minha Conta</h2>
+                <div class="perfil-usuario">
+                    <div class="foto-perfil">
+                        <img src="user-default.jpg" alt="Foto do usuário" id="user-photo">
+                        <button class="btn-alterar-foto" id="alterarFotoBtn">Alterar Foto</button>
+                    </div>
+                    <div class="info-usuario">
+                        <h3>Informações Pessoais</h3>
+                        
+                        <div class="info-item">
+                            <strong>Nome:</strong> <span id="user-name">Usuário Exemplo</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Email:</strong> <span id="user-email">usuario@exemplo.com</span>
+                        </div>
+                        
+                        <div class="info-item">
+                            <strong>Membro desde:</strong> <span id="user-join-date">Janeiro 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Configurações -->
+<section id="configuracoes" class="aba">
+    <div class="configuracoes-container">
+        <h2>Configurações</h2>
+        <form class="form-configuracoes" id="configForm">
+            <div class="config-group">
+                <label for="tema">Tema do site:</label>
+                <select id="tema">
+                    <option value="claro">Claro</option>
+                    <option value="escuro">Escuro</option>
+                    <option value="auto">Automático (sistema)</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="btn-salvar-config">Salvar Configurações</button>
+        </form>
+    </div>
+</section>
+
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    <script src="centralMetas.js"></script>
+</body>
+</html>

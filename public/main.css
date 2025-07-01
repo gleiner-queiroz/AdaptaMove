@@ -1,0 +1,353 @@
+/* main.css - Estilo para ambas as páginas */
+:root {
+  --primary-color: #6c63ff;
+  --secondary-color: #4d44db;
+  --accent-color: #ff6584;
+  --dark-color: #2a2a72;
+  --light-color: #f8f9fa;
+  --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  line-height: 1.6;
+}
+
+.auth-container {
+  display: flex;
+  width: 900px;
+  max-width: 95%;
+  min-height: 600px;
+  background: white;
+  border-radius: 20px;
+  background: linear-gradient(-45deg, #4894e69e, #0008ff, #0b7dba, #1647d7);
+    background-size: 400% 400%;
+    animation: gradientAzul 20s ease infinite;
+  overflow: hidden;
+  position: relative;
+}
+
+.auth-section {
+  flex: 1;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+
+.auth-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  z-index: -1;
+}
+
+.auth-section.signup::before {
+  background: linear-gradient(-45deg, #4894e69e, #0008ff, #0b7dba, #1647d7);
+    background-size: 400% 400%;
+    animation: gradientAzul 20s ease infinite;
+}
+
+.auth-section.login::before {
+  background: linear-gradient(-45deg, #4894e69e, #0008ff, #0b7dba, #1647d7);
+    background-size: 400% 400%;
+    animation: gradientAzul 20s ease infinite;
+}
+
+.auth-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.auth-section p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.auth-form-container {
+  flex: 1;
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-form-container h1 {
+  color: rgb(0, 81, 255); 
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-input-container {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.auth-input-field {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  border: 2px solid #e6e6e6;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.auth-input-field:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+}
+
+.auth-input-label {
+  position: absolute;
+  left: 45px;
+  top: 15px;
+  color: #999;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  background: white;
+  padding: 0 5px;
+}
+
+.auth-input-field:focus + .auth-input-label,
+.auth-input-field:not(:placeholder-shown) + .auth-input-label {
+  top: -10px;
+  left: 35px;
+  font-size: 0.8rem;
+  color: var(--primary-color);
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.auth-input-field:focus ~ .input-icon {
+  color: var(--primary-color);
+}
+
+.auth-submit-button {
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  background: linear-gradient(-45deg, #4894e69e, #0008ff, #0b7dba, #1647d7);
+    background-size: 400% 400%;
+    animation: gradientAzul 20s ease infinite;
+}
+
+.auth-submit-button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(-45deg, #4894e69e, #0008ff, #0b7dba, #1647d7);
+    background-size: 400% 400%;
+    animation: gradientAzul 20s ease infinite;
+}
+
+.auth-link {
+  color: rgb(0, 110, 255);
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.auth-link:hover {
+  color: rgb(0, 110, 255)
+  text-decoration: underline;
+}
+
+/* Efeitos adicionais para tornar mais moderno */
+.auth-section::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: -1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .auth-container {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .auth-section, .auth-form-container {
+    padding: 40px 30px;
+  }
+  
+  .auth-section {
+    order: -1;
+  }
+  
+  .auth-section h1 {
+    font-size: 2rem;
+  }
+}
+.auth-section .logo-container img {
+  max-width: 250px;
+  height: auto;
+  border: 3px solid dodgerblue;  
+  border-radius: 12px;         /* Arredonda a borda */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+/* Estilos gerais do corpo */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efeito de bolhas/partículas no fundo */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.8) 0%, transparent 20%),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.8) 0%, transparent 20%),
+    radial-gradient(circle at 40% 60%, rgba(255,255,255,0.8) 0%, transparent 20%);
+  background-size: 200% 200%;
+  animation: gradientBackground 15s ease infinite;
+  z-index: -1;
+}
+
+/* Animação para o fundo */
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Container principal */
+.auth-container {
+  width: 80%;
+  max-width: 1000px;
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* Seção esquerda (imagem/fundo) */
+.auth-section {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(106, 147, 219, 0.1) 0%, rgba(40, 62, 81, 0.1) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    linear-gradient(45deg, transparent 65%, rgba(106, 147, 219, 0.05) 65%),
+    linear-gradient(-45deg, transparent 65%, rgba(40, 62, 81, 0.05) 65%);
+  background-size: 30px 30px;
+  animation: patternAnimation 60s linear infinite;
+  z-index: -1;
+}
+
+@keyframes patternAnimation {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-30px, 30px);
+  }
+}
+
+/* Container do logo */
+.logo-container {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.logo-container img {
+  transition: transform 0.3s ease;
+}
+
+.logo-container img:hover {
+  transform: scale(1.20);
+}
+
+/* Seção direita (formulário) */
+.auth-form-container {
+  flex: 1;
+  padding: 50px;
+  background-color: white;
+}
